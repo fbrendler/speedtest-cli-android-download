@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Speedtest CLI Android · Download</title>
+<meta name="description" content="Mede latência, jitter, download e upload e compara dois servidores lado a lado, sem abrir outro app.">
+<link rel="icon" href="logo.png">
+<style>
+  :root{
+    --bg:#f5f5f6; --card:#ffffff; --text:#17181b; --muted:#5d6068; --line:#e3e4e8;
+    --accent:#1f6feb; --accent-text:#ffffff; --soft:#eaf1fd;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#141518; --card:#1e2024; --text:#f2f3f5; --muted:#a3a7b0; --line:#2c2f35; --soft:#16213a; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  main{max-width:560px;margin:0 auto;padding:28px 16px 40px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand img{width:64px;height:64px;border-radius:16px}
+  h1{font-size:26px;margin:0}
+  .tag{color:var(--muted);margin:2px 0 0;font-size:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:16px}
+  .download{display:block;text-align:center;background:var(--accent);color:var(--accent-text);text-decoration:none;
+    font-weight:700;font-size:18px;padding:16px;border-radius:14px;margin-top:18px}
+  .download:active{opacity:.85}
+  .meta{color:var(--muted);font-size:13px;text-align:center;margin:8px 0 0}
+  h2{font-size:17px;margin:0 0 10px}
+  ol,ul{margin:0;padding-left:20px}
+  li{margin:6px 0}
+  .warn{background:var(--soft);border-color:transparent}
+  code{font-size:12px;word-break:break-all;color:var(--muted)}
+  footer{color:var(--muted);font-size:13px;text-align:center;margin-top:24px}
+  .shots{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+  .shots figure{margin:0;flex:0 0 46%;scroll-snap-align:start}
+  .shots img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+  .shots figcaption{font-size:12px;color:var(--muted);text-align:center;margin-top:4px}
+  table.metrics{width:100%;border-collapse:collapse;font-size:14px}
+  table.metrics td{padding:6px 4px;border-bottom:1px solid var(--line)}
+  table.metrics td:first-child{color:var(--muted)}
+  table.metrics td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">
+    <img src="logo.png" alt="">
+    <div>
+      <h1>Speedtest CLI Android</h1>
+      <p class="tag">Latência, jitter, download e upload — e comparação de dois servidores</p>
+    </div>
+  </div>
+
+  <a class="download" href="https://github.com/fbrendler/speedtest-cli-android-download/releases/latest/download/speedtest-cli-android.apk">Baixar para Android</a>
+  <p class="meta">Versão 0.1 · 2 MB · Android 11 ou mais recente</p>
+
+  <section class="card">
+    <h2>O que o app faz</h2>
+    <ul>
+      <li><b>Mede no próprio aparelho:</b> latência, jitter, download e upload, sem abrir outro app.</li>
+      <li><b>Compara dois servidores lado a lado:</b> mede o servidor A e depois o B na mesma conexão, com ✓ no melhor de cada linha e a variação em % (Δ).</li>
+      <li><b>32 servidores Claro</b> em todo o Brasil (inclui os três de Florianópolis: 16338, 21732 e 1201).</li>
+      <li><b>Usar minha localização</b> escolhe o servidor mais próximo e sugere outro da mesma cidade para comparar.</li>
+      <li><b>Copiar resultado (JSON)</b> com as duas medições juntas, no mesmo formato do CLI da Ookla.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Como instalar</h2>
+    <ol>
+      <li>Toque em <b>Baixar para Android</b> e abra o arquivo baixado.</li>
+      <li>Se o Android pedir, permita <b>instalar apps desta fonte</b> (navegador ou gerenciador de arquivos).</li>
+      <li>Toque em <b>Instalar</b>.</li>
+      <li>Se o <b>Google Play Protect</b> avisar que o app não foi analisado, toque em <b>Enviar para verificação</b> (gratuito) ou, em <b>Mais detalhes</b>, instale sem verificar. O aviso aparece porque o app não vem da Play Store.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>Exemplo de comparação</h2>
+    <table class="metrics">
+      <tr><td>Servidor A</td><td>16338 Claro Fibra - FLN</td></tr>
+      <tr><td>Servidor B</td><td>1201 PoP-SC/RNP</td></tr>
+      <tr><td>Ping</td><td>12,3 ms vs 14,1 ms</td></tr>
+      <tr><td>Jitter</td><td>1,2 ms vs 1,8 ms</td></tr>
+      <tr><td>Download</td><td>300,0 Mbps vs 250,0 Mbps</td></tr>
+      <tr><td>Upload</td><td>120,0 Mbps vs 118,0 Mbps</td></tr>
+    </table>
+    <p class="meta" style="text-align:left">Valores de exemplo — o app marca ✓ no melhor de cada linha e calcula a variação.</p>
+  </section>
+
+  <section class="card">
+    <h2>Novidades da 0.1</h2>
+    <ul>
+      <li>Primeira versão: medição de latência, jitter, download e upload.</li>
+      <li>Comparação de dois servidores lado a lado, com Δ% e ✓ no melhor.</li>
+      <li>Servidor mais próximo pela localização e sugestão de outro da mesma cidade.</li>
+      <li>Cópia do resultado em JSON (as duas medições).</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Privacidade</h2>
+    <p style="margin:0">O app só faz medições de velocidade. Não envia resultados, não pede login e não acessa seus arquivos. A localização (opcional) serve apenas para sugerir o servidor mais próximo.</p>
+  </section>
+
+  <footer>
+    by <b>BRENDLER™</b><br>
+    <code>SHA-256 do APK 0.1: ed932278d04fcc0841a7f7541b5891d51ce2309e302e190ea5a664fe0b46580d</code>
+  </footer>
+</main>
+</body>
+</html>
